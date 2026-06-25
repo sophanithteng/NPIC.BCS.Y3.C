@@ -1,138 +1,106 @@
 ﻿using NPIC.BCS.Y3.C.Sophanith.function;
 using NPIC.BCS.Y3.C.Sophanith.layout;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NPIC.BCS.Y3.C.Sophanith.user
 {
-    public partial class frmUser : Form
+    public partial class FrmUser : Form
     {
-        public frmUser()
+        public FrmUser()
         {
             InitializeComponent();
-            // Ensure dataset reference uses correct casing: NPIC_BCS_Y3_CDataSet
         }
 
-        private byte[] ImageToByteArray(Image img)
+        private void tbl_UsersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            if (img == null) return null;
-            using (var ms = new MemoryStream())
-            {
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                return ms.ToArray();
-            }
+            this.Validate();
+            this.tbl_UsersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.nPIC_BCS_Y3_CDataSet);
+
         }
 
-        private static object ToDbValue(object val)
+        private void FrmUser_Load(object sender, EventArgs e)
         {
-            if (val == null || val == DBNull.Value) return DBNull.Value;
-            if (val is string s && string.IsNullOrWhiteSpace(s)) return DBNull.Value;
-            return val;
+            // TODO: This line of code loads data into the 'nPIC_BCS_Y3_CDataSet.tbl_Genders' table. You can move, or remove it, as needed.
+            this.tbl_GendersTableAdapter.Fill(this.nPIC_BCS_Y3_CDataSet.tbl_Genders);
+            // TODO: This line of code loads data into the 'nPIC_BCS_Y3_CDataSet.user_view' table. You can move, or remove it, as needed.
+            this.user_viewTableAdapter.Fill(this.nPIC_BCS_Y3_CDataSet.user_view);
+            // TODO: This line of code loads data into the 'nPIC_BCS_Y3_CDataSet.tbl_Users' table. You can move, or remove it, as needed.
+            this.tbl_UsersTableAdapter.Fill(this.nPIC_BCS_Y3_CDataSet.tbl_Users);
+            this.tbl_UsersBindingSource.Filter = "id=-1";
+
         }
 
-        private void frmUser_Load(object sender, EventArgs e)
+        private void btnadd_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.tblUsersTableAdapter.Fill(this.nPIC_BCS_Y3_CDataSet.tbl_Users);
-
-                if (this.picturePictureBox.Image == null)
-                {
-                    this.picturePictureBox.Image = global::NPIC.BCS.Y3.C.Properties.Resources.working;
-                }
-                this.picturePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                try
-                {
-                    var idBinding = this.idTextBox.DataBindings["Text"];
-                    if (idBinding != null)
-                    {
-                        idBinding.Format += (s, ev) =>
-                        {
-                            if (ev.DesiredType == typeof(string) && ev.Value is int intVal && intVal < 0)
-                            {
-                                ev.Value = string.Empty;
-                            }
-                        };
-                    }
-                }
-                catch
-                {
-                    // Ignore binding errors if controls don't exist
-                }
-
-                using (var conn = new SqlConnection(Properties.Settings.Default.NPIC_BCS_Y3_CConnectionString))
-                {
-                    conn.Open();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading data or connecting to DB: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            new frmUpdate().ShowDialog();
         }
 
-        private void btnadduser_Click(object sender, EventArgs e)
+        private void btnback_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.tblUsersBindingSource.AddNew();
+            GB.OpenForm(new frmHome());
+        }
 
-                var drv = this.tblUsersBindingSource.Current as DataRowView;
-                if (drv != null && drv.Row != null)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.tbl_UsersBindingSource.AddNew();
+            statusCheckBox.Checked = false;
+            created_atDateTimePicker.Text = "01-01-01";
+            created_atDateTimePicker.Value = DateTime.Now;
+            gender_idComboBox.SelectedIndex = 0;
+            roleComboBox.SelectedIndex = 0;
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            tbl_UsersBindingNavigatorSaveItem_Click(sender, e);
+            MessageBox.Show("you information have been save");
+            this.user_viewTableAdapter.Fill(this.nPIC_BCS_Y3_CDataSet.user_view);
+        }
+
+        private void picturePictureBox_DoubleClick(object sender, EventArgs e)
+        {
+            using (OpenFileDialog fp = new OpenFileDialog())
+            {
+                fp.Title = "Picture";
+                fp.Filter = "Image Files|*.png;*.jpg;*.jpeg";
+                fp.Multiselect = false;
+
+                if (fp.ShowDialog() == DialogResult.OK)
                 {
-                    // Set default values based on the specific schema provided
-                    if (drv.Row.Table.Columns.Contains("status"))
-                        drv["status"] = true; // New user active by default
-
-                    if (drv.Row.Table.Columns.Contains("created_at"))
-                        drv["created_at"] = DateTime.Now; // Log creation time
-
-                    if (drv.Row.Table.Columns.Contains("picture"))
-                    {
-                        using (MemoryStream ms = new MemoryStream())
-                        {
-                            global::NPIC.BCS.Y3.C.Properties.Resources.working.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                            drv["picture"] = ms.ToArray();
-                        }
-                        this.picturePictureBox.Image = global::NPIC.BCS.Y3.C.Properties.Resources.working;
-                    }
+                    picturePictureBox.Image = Image.FromFile(fp.FileName);
                 }
-
-                this.usernameTextBox.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Add user failed: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnsave_Click(object sender, EventArgs e)
+        private void btnsearch_Click(object sender, EventArgs e)
         {
-            try
+            string search = txtsearch.Text.Trim().Replace("'", "'");
+            this.user_viewBindingSource.Filter = "nickname LIKE '%" + search + "%' OR username LIKE '%" + search + "%'";
+        }
+
+        private void txtsearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                if (string.IsNullOrWhiteSpace(this.usernameTextBox.Text) || string.IsNullOrWhiteSpace(this.nicknameTextBox.Text))
-                {
-                    MessageBox.Show("Please provide both User Name and Nick Name.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                this.Validate();
-                this.tblUsersBindingSource.EndEdit();
-
-                this.tableAdapterManager.UpdateAll(this.nPIC_BCS_Y3_CDataSet);
-
-                // Refresh dataset
-                this.tblUsersTableAdapter.Fill(this.nPIC_BCS_Y3_CDataSet.tbl_Users);
-                MessageBox.Show("Saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnsearch_Click(sender, e);
             }
-            catch (Exception ex)
+        }
+
+        private void user_viewDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex != 1) 
             {
-                MessageBox.Show("Save failed: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int id = int.Parse(user_viewDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString());
+                this.tbl_UsersBindingSource.Filter = "id =" + id;
             }
         }
 
@@ -140,115 +108,31 @@ namespace NPIC.BCS.Y3.C.Sophanith.user
         {
             try
             {
-                var msg = MessageBox.Show("Are you sure you want to delete this user?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (msg != DialogResult.Yes) return;
-
-                this.tblUsersBindingSource.RemoveCurrent();
-                this.Validate();
-                this.tblUsersBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.nPIC_BCS_Y3_CDataSet);
-
-                MessageBox.Show("Deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                this.tblUsersTableAdapter.Fill(this.nPIC_BCS_Y3_CDataSet.tbl_Users);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Delete failed: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btncancel_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.tblUsersBindingSource.CancelEdit();
-                this.tblUsersTableAdapter.Fill(this.nPIC_BCS_Y3_CDataSet.tbl_Users);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Cancel failed: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void tblUsersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tblUsersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.nPIC_BCS_Y3_CDataSet);
-        }
-
-        private void toolStrip_Save_Click(object sender, EventArgs e)
-        {
-            this.tblUsersBindingNavigatorSaveItem_Click(sender, e);
-            MessageBox.Show("Saved!");
-        }
-
-        private void toolStrip_Create_Click(object sender, EventArgs e)
-        {
-            btnadduser_Click(sender, e);
-            try { this.statusCheckBox.Checked = true; } catch { }
-        }
-
-        private void toolStrip_Delete_Click(object sender, EventArgs e)
-        {
-            btndelete_Click(sender, e);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            GB.OpenForm(new Sophanith.frmHome());
-        }
-
-        private void toolStrip_Search_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnaddinformation_Click(object sender, EventArgs e)
-        {
-            using (var addinformation = new frmUpdate())
-            {
-                addinformation.ShowDialog();
-            }
-        }
-
-        private void picturePictureBox_Click_1(object sender, EventArgs e)
-        {
-            using (OpenFileDialog fp = new OpenFileDialog())
-            {
-                fp.Title = "Select Image";
-                fp.Filter = "Image Files|*.png;*.jpg;*.jpeg;*.bmp";
-                fp.Multiselect = false;
-
-                if (fp.ShowDialog() == DialogResult.OK)
+                // 1. Check if anything is actually selected in the BindingSource
+                if (this.tbl_UsersBindingSource.Current == null)
                 {
-                    try
-                    {
-                        byte[] bytes = File.ReadAllBytes(fp.FileName);
-                        Image selectedImg;
-                        using (var ms = new MemoryStream(bytes))
-                        {
-                            selectedImg = Image.FromStream(ms);
-                        }
-
-                        picturePictureBox.Image = selectedImg;
-                        var drv = this.tblUsersBindingSource.Current as DataRowView;
-
-                        if (drv != null)
-                        {
-                            // Explicitly map to the lowercase "picture" column from the database schema
-                            if (drv.Row.Table.Columns.Contains("picture"))
-                            {
-                                drv["picture"] = bytes;
-                            }
-                            this.tblUsersBindingSource.EndEdit();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Please select a user to delete.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
+
+                // 2. Confirm Deletion
+                if (MessageBox.Show("Are you sure you want to delete this user?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // 3. Remove the currently selected row from the BindingSource
+                    this.tbl_UsersBindingSource.RemoveCurrent();
+
+                    // 4. Save changes to the database
+                    this.tableAdapterManager.UpdateAll(this.nPIC_BCS_Y3_CDataSet);
+
+                    MessageBox.Show("User has been successfully deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Refresh the view
+                    this.user_viewTableAdapter.Fill(this.nPIC_BCS_Y3_CDataSet.user_view);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

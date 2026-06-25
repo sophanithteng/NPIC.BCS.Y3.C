@@ -2,9 +2,10 @@
 <xs:schema id="masterDataSet" targetNamespace="http://tempuri.org/masterDataSet.xsd" xmlns:mstns="http://tempuri.org/masterDataSet.xsd" xmlns="http://tempuri.org/masterDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="masterConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="masterConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.NPIC.BCS.Y3.C.Properties.Settings.GlobalReference.Default.masterConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="NPIC_BCS_Y3_CConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="NPIC_BCS_Y3_CConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.NPIC.BCS.Y3.C.Properties.Settings.GlobalReference.Default.NPIC_BCS_Y3_CConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AdministrativeBoundariesTableAdapter" GeneratorDataComponentClassName="AdministrativeBoundariesTableAdapter" Name="AdministrativeBoundaries" UserDataComponentName="AdministrativeBoundariesTableAdapter">
@@ -76,28 +77,28 @@ SELECT ID, TitleEN, TitleKH, Code FROM AdministrativeBoundaries WHERE (ID = @ID)
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="masterDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="masterDataSet" msprop:Generator_DataSetName="masterDataSet">
+  <xs:element name="masterDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="masterDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="masterDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="AdministrativeBoundaries" msprop:Generator_RowEvHandlerName="AdministrativeBoundariesRowChangeEventHandler" msprop:Generator_RowDeletedName="AdministrativeBoundariesRowDeleted" msprop:Generator_RowDeletingName="AdministrativeBoundariesRowDeleting" msprop:Generator_RowEvArgName="AdministrativeBoundariesRowChangeEvent" msprop:Generator_TablePropName="AdministrativeBoundaries" msprop:Generator_RowChangedName="AdministrativeBoundariesRowChanged" msprop:Generator_RowChangingName="AdministrativeBoundariesRowChanging" msprop:Generator_TableClassName="AdministrativeBoundariesDataTable" msprop:Generator_RowClassName="AdministrativeBoundariesRow" msprop:Generator_TableVarName="tableAdministrativeBoundaries" msprop:Generator_UserTableName="AdministrativeBoundaries">
+        <xs:element name="AdministrativeBoundaries" msprop:Generator_RowEvHandlerName="AdministrativeBoundariesRowChangeEventHandler" msprop:Generator_RowDeletedName="AdministrativeBoundariesRowDeleted" msprop:Generator_RowDeletingName="AdministrativeBoundariesRowDeleting" msprop:Generator_RowEvArgName="AdministrativeBoundariesRowChangeEvent" msprop:Generator_TablePropName="AdministrativeBoundaries" msprop:Generator_RowChangedName="AdministrativeBoundariesRowChanged" msprop:Generator_UserTableName="AdministrativeBoundaries" msprop:Generator_RowChangingName="AdministrativeBoundariesRowChanging" msprop:Generator_RowClassName="AdministrativeBoundariesRow" msprop:Generator_TableClassName="AdministrativeBoundariesDataTable" msprop:Generator_TableVarName="tableAdministrativeBoundaries">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="TitleEN" msprop:Generator_ColumnPropNameInRow="TitleEN" msprop:Generator_ColumnPropNameInTable="TitleENColumn" msprop:Generator_ColumnVarNameInTable="columnTitleEN" msprop:Generator_UserColumnName="TitleEN" minOccurs="0">
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="TitleEN" msprop:Generator_ColumnPropNameInTable="TitleENColumn" msprop:Generator_ColumnPropNameInRow="TitleEN" msprop:Generator_UserColumnName="TitleEN" msprop:Generator_ColumnVarNameInTable="columnTitleEN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TitleKH" msprop:Generator_ColumnPropNameInRow="TitleKH" msprop:Generator_ColumnPropNameInTable="TitleKHColumn" msprop:Generator_ColumnVarNameInTable="columnTitleKH" msprop:Generator_UserColumnName="TitleKH" minOccurs="0">
+              <xs:element name="TitleKH" msprop:Generator_ColumnPropNameInTable="TitleKHColumn" msprop:Generator_ColumnPropNameInRow="TitleKH" msprop:Generator_UserColumnName="TitleKH" msprop:Generator_ColumnVarNameInTable="columnTitleKH" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Code" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_UserColumnName="Code" type="xs:int" minOccurs="0" />
+              <xs:element name="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_UserColumnName="Code" msprop:Generator_ColumnVarNameInTable="columnCode" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -110,7 +111,7 @@ SELECT ID, TitleEN, TitleKH, Code FROM AdministrativeBoundaries WHERE (ID = @ID)
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_AdministrativeBoundaries_AdministrativeBoundaries" msdata:parent="AdministrativeBoundaries" msdata:child="AdministrativeBoundaries" msdata:parentkey="ID" msdata:childkey="Code" msprop:Generator_ChildPropName="GetAdministrativeBoundariesRows" msprop:Generator_UserChildTable="AdministrativeBoundaries" msprop:Generator_RelationVarName="relationFK_AdministrativeBoundaries_AdministrativeBoundaries" msprop:Generator_UserRelationName="FK_AdministrativeBoundaries_AdministrativeBoundaries" msprop:Generator_UserParentTable="AdministrativeBoundaries" msprop:Generator_ParentPropName="AdministrativeBoundariesRowParent" />
+      <msdata:Relationship name="FK_AdministrativeBoundaries_AdministrativeBoundaries" msdata:parent="AdministrativeBoundaries" msdata:child="AdministrativeBoundaries" msdata:parentkey="ID" msdata:childkey="Code" msprop:Generator_UserParentTable="AdministrativeBoundaries" msprop:Generator_UserChildTable="AdministrativeBoundaries" msprop:Generator_RelationVarName="relationFK_AdministrativeBoundaries_AdministrativeBoundaries" msprop:Generator_ChildPropName="GetAdministrativeBoundariesRows" msprop:Generator_ParentPropName="AdministrativeBoundariesRowParent" msprop:Generator_UserRelationName="FK_AdministrativeBoundaries_AdministrativeBoundaries" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

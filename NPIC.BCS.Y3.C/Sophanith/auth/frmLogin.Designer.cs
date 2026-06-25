@@ -42,10 +42,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::NPIC.BCS.Y3.C.Properties.Resources.small_logo_Bsf7QfD_;
-            this.pictureBox1.Location = new System.Drawing.Point(229, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(164, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 199);
+            this.pictureBox1.Size = new System.Drawing.Size(179, 162);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -54,9 +54,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("!Khmer OS Siemreap", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(83, 210);
+            this.label1.Location = new System.Drawing.Point(62, 171);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(483, 41);
+            this.label1.Size = new System.Drawing.Size(398, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "សូមស្វាគមន៏មកកាន់វិទ្យាស្ថានពហុបច្ចេកទេសកម្ពុជា";
             // 
@@ -64,20 +65,20 @@
             // 
             this.txtname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtname.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtname.Location = new System.Drawing.Point(285, 287);
-            this.txtname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtname.Location = new System.Drawing.Point(214, 233);
+            this.txtname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(290, 45);
+            this.txtname.Size = new System.Drawing.Size(218, 37);
             this.txtname.TabIndex = 2;
             // 
             // txtpasswrd
             // 
             this.txtpasswrd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpasswrd.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpasswrd.Location = new System.Drawing.Point(285, 369);
-            this.txtpasswrd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtpasswrd.Location = new System.Drawing.Point(214, 300);
+            this.txtpasswrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtpasswrd.Name = "txtpasswrd";
-            this.txtpasswrd.Size = new System.Drawing.Size(290, 45);
+            this.txtpasswrd.Size = new System.Drawing.Size(218, 37);
             this.txtpasswrd.TabIndex = 3;
             // 
             // btnlogin
@@ -86,10 +87,10 @@
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlogin.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnlogin.Location = new System.Drawing.Point(347, 473);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnlogin.Location = new System.Drawing.Point(260, 384);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(219, 48);
+            this.btnlogin.Size = new System.Drawing.Size(164, 39);
             this.btnlogin.TabIndex = 4;
             this.btnlogin.Text = "ចូលប្រើប្រាស់ប្រព័ន្ធ";
             this.btnlogin.UseVisualStyleBackColor = false;
@@ -99,9 +100,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(103, 287);
+            this.label2.Location = new System.Drawing.Point(63, 235);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 36);
+            this.label2.Size = new System.Drawing.Size(96, 29);
             this.label2.TabIndex = 6;
             this.label2.Text = "បញ្ចូលឈ្មោះ";
             // 
@@ -109,9 +111,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(103, 369);
+            this.label3.Location = new System.Drawing.Point(63, 302);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 36);
+            this.label3.Size = new System.Drawing.Size(132, 29);
             this.label3.TabIndex = 7;
             this.label3.Text = "បញ្ចូលពាក្យសម្ងាត់";
             // 
@@ -119,10 +122,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Khmer OS Battambang", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(413, 431);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox1.Location = new System.Drawing.Point(310, 350);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(153, 35);
+            this.checkBox1.Size = new System.Drawing.Size(127, 29);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "មើលពាក្យសម្ងាត់";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -130,9 +133,9 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 638);
+            this.ClientSize = new System.Drawing.Size(514, 518);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -141,7 +144,7 @@
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";

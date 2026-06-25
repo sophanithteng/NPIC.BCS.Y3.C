@@ -1,6 +1,6 @@
 ﻿namespace NPIC.BCS.Y3.C.Sophanith.user
 {
-    partial class frmUser
+    partial class FrmUser
     {
         /// <summary>
         /// Required designer variable.
@@ -40,33 +40,14 @@
             System.Windows.Forms.Label created_byLabel;
             System.Windows.Forms.Label created_atLabel;
             System.Windows.Forms.Label pictureLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUser));
-            this.btnsave = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
-            this.btncancel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnadduser = new System.Windows.Forms.Button();
-            this.btnaddinformation = new System.Windows.Forms.Button();
-            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nPIC_BCS_Y3_CDataSet = new NPIC.BCS.Y3.C.NPIC_BCS_Y3_CDataSet();
-            this.tblUsersTableAdapter = new NPIC.BCS.Y3.C.NPIC_BCS_Y3_CDataSetTableAdapters.tbl_UsersTableAdapter();
+            this.tbl_UsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_UsersTableAdapter = new NPIC.BCS.Y3.C.NPIC_BCS_Y3_CDataSetTableAdapters.tbl_UsersTableAdapter();
             this.tableAdapterManager = new NPIC.BCS.Y3.C.NPIC_BCS_Y3_CDataSetTableAdapters.TableAdapterManager();
-            this.tbl_UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nicknameTextBox = new System.Windows.Forms.TextBox();
             this.gender_idComboBox = new System.Windows.Forms.ComboBox();
+            this.tblGendersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
@@ -75,6 +56,26 @@
             this.created_byTextBox = new System.Windows.Forms.TextBox();
             this.created_atDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.picturePictureBox = new System.Windows.Forms.PictureBox();
+            this.user_viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.user_viewTableAdapter = new NPIC.BCS.Y3.C.NPIC_BCS_Y3_CDataSetTableAdapters.user_viewTableAdapter();
+            this.user_viewDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnback = new System.Windows.Forms.Button();
+            this.tbl_GendersTableAdapter = new NPIC.BCS.Y3.C.NPIC_BCS_Y3_CDataSetTableAdapters.tbl_GendersTableAdapter();
+            this.txtsearch = new System.Windows.Forms.TextBox();
+            this.btnsearch = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             nicknameLabel = new System.Windows.Forms.Label();
             gender_idLabel = new System.Windows.Forms.Label();
@@ -86,227 +87,148 @@
             created_byLabel = new System.Windows.Forms.Label();
             created_atLabel = new System.Windows.Forms.Label();
             pictureLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPIC_BCS_Y3_CDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_UsersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_UsersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblGendersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.user_viewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.user_viewDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(314, 47);
+            idLabel.Location = new System.Drawing.Point(935, 619);
+            idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(36, 36);
-            idLabel.TabIndex = 27;
+            idLabel.Size = new System.Drawing.Size(21, 16);
+            idLabel.TabIndex = 1;
             idLabel.Text = "id:";
+            idLabel.Visible = false;
             // 
             // nicknameLabel
             // 
             nicknameLabel.AutoSize = true;
             nicknameLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nicknameLabel.Location = new System.Drawing.Point(245, 98);
+            nicknameLabel.Location = new System.Drawing.Point(124, 102);
+            nicknameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nicknameLabel.Name = "nicknameLabel";
-            nicknameLabel.Size = new System.Drawing.Size(105, 36);
-            nicknameLabel.TabIndex = 29;
-            nicknameLabel.Text = "nickname:";
+            nicknameLabel.Size = new System.Drawing.Size(152, 36);
+            nicknameLabel.TabIndex = 3;
+            nicknameLabel.Text = "ឈ្មោះហៅក្រៅ  :";
             // 
             // gender_idLabel
             // 
             gender_idLabel.AutoSize = true;
             gender_idLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            gender_idLabel.Location = new System.Drawing.Point(241, 199);
+            gender_idLabel.Location = new System.Drawing.Point(124, 165);
+            gender_idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gender_idLabel.Name = "gender_idLabel";
-            gender_idLabel.Size = new System.Drawing.Size(104, 36);
-            gender_idLabel.TabIndex = 31;
-            gender_idLabel.Text = "gender id:";
+            gender_idLabel.Size = new System.Drawing.Size(67, 36);
+            gender_idLabel.TabIndex = 5;
+            gender_idLabel.Text = "ភេទ  :";
             // 
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
             usernameLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usernameLabel.Location = new System.Drawing.Point(241, 149);
+            usernameLabel.Location = new System.Drawing.Point(124, 223);
+            usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new System.Drawing.Size(109, 36);
-            usernameLabel.TabIndex = 33;
-            usernameLabel.Text = "username:";
+            usernameLabel.Size = new System.Drawing.Size(160, 36);
+            usernameLabel.TabIndex = 7;
+            usernameLabel.Text = "ឈ្មោះប្រើប្រាស់  :";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
             passwordLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            passwordLabel.Location = new System.Drawing.Point(239, 250);
+            passwordLabel.Location = new System.Drawing.Point(124, 281);
+            passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(106, 36);
-            passwordLabel.TabIndex = 35;
-            passwordLabel.Text = "password:";
+            passwordLabel.Size = new System.Drawing.Size(124, 36);
+            passwordLabel.TabIndex = 9;
+            passwordLabel.Text = "ពាក្យសម្ងាត់ :";
             // 
             // phoneLabel
             // 
             phoneLabel.AutoSize = true;
             phoneLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            phoneLabel.Location = new System.Drawing.Point(269, 301);
+            phoneLabel.Location = new System.Drawing.Point(124, 342);
+            phoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             phoneLabel.Name = "phoneLabel";
-            phoneLabel.Size = new System.Drawing.Size(76, 36);
-            phoneLabel.TabIndex = 37;
-            phoneLabel.Text = "phone:";
+            phoneLabel.Size = new System.Drawing.Size(128, 36);
+            phoneLabel.TabIndex = 11;
+            phoneLabel.Text = "លេខទូរស័ព្ទ  :";
             // 
             // roleLabel
             // 
             roleLabel.AutoSize = true;
             roleLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            roleLabel.Location = new System.Drawing.Point(291, 351);
+            roleLabel.Location = new System.Drawing.Point(124, 400);
+            roleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             roleLabel.Name = "roleLabel";
-            roleLabel.Size = new System.Drawing.Size(54, 36);
-            roleLabel.TabIndex = 39;
-            roleLabel.Text = "role:";
+            roleLabel.Size = new System.Drawing.Size(81, 36);
+            roleLabel.TabIndex = 13;
+            roleLabel.Text = "តួនាទី  :";
             // 
             // statusLabel
             // 
             statusLabel.AutoSize = true;
             statusLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            statusLabel.Location = new System.Drawing.Point(266, 496);
+            statusLabel.Location = new System.Drawing.Point(124, 519);
+            statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             statusLabel.Name = "statusLabel";
-            statusLabel.Size = new System.Drawing.Size(75, 36);
-            statusLabel.TabIndex = 41;
-            statusLabel.Text = "status:";
+            statusLabel.Size = new System.Drawing.Size(108, 36);
+            statusLabel.TabIndex = 15;
+            statusLabel.Text = "ស្ថានភាព​  :";
             // 
             // created_byLabel
             // 
             created_byLabel.AutoSize = true;
             created_byLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            created_byLabel.Location = new System.Drawing.Point(230, 402);
+            created_byLabel.Location = new System.Drawing.Point(124, 465);
+            created_byLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             created_byLabel.Name = "created_byLabel";
-            created_byLabel.Size = new System.Drawing.Size(115, 36);
-            created_byLabel.TabIndex = 43;
-            created_byLabel.Text = "created by:";
+            created_byLabel.Size = new System.Drawing.Size(129, 36);
+            created_byLabel.TabIndex = 17;
+            created_byLabel.Text = "បង្កើតដោយ​​  :";
             // 
             // created_atLabel
             // 
             created_atLabel.AutoSize = true;
-            created_atLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            created_atLabel.Location = new System.Drawing.Point(230, 453);
+            created_atLabel.Location = new System.Drawing.Point(899, 678);
+            created_atLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             created_atLabel.Name = "created_atLabel";
-            created_atLabel.Size = new System.Drawing.Size(111, 36);
-            created_atLabel.TabIndex = 45;
+            created_atLabel.Size = new System.Drawing.Size(70, 16);
+            created_atLabel.TabIndex = 19;
             created_atLabel.Text = "created at:";
+            created_atLabel.Visible = false;
             // 
             // pictureLabel
             // 
             pictureLabel.AutoSize = true;
             pictureLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pictureLabel.Location = new System.Drawing.Point(902, 425);
+            pictureLabel.Location = new System.Drawing.Point(865, 71);
+            pictureLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             pictureLabel.Name = "pictureLabel";
             pictureLabel.Size = new System.Drawing.Size(197, 36);
-            pictureLabel.TabIndex = 47;
+            pictureLabel.TabIndex = 21;
             pictureLabel.Text = "បញ្ចូលរូបភាពនៅទីនេះ";
-            // 
-            // btnsave
-            // 
-            this.btnsave.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsave.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnsave.Location = new System.Drawing.Point(1456, 480);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(162, 52);
-            this.btnsave.TabIndex = 20;
-            this.btnsave.Text = "រក្សាទុក្ខទិន្នន័យ";
-            this.btnsave.UseVisualStyleBackColor = false;
-            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
-            // 
-            // btndelete
-            // 
-            this.btndelete.BackColor = System.Drawing.Color.Red;
-            this.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btndelete.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btndelete.Location = new System.Drawing.Point(1269, 480);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(162, 52);
-            this.btndelete.TabIndex = 21;
-            this.btndelete.Text = "លុបទិន្នន័យ";
-            this.btndelete.UseVisualStyleBackColor = false;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
-            // btncancel
-            // 
-            this.btncancel.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btncancel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btncancel.Location = new System.Drawing.Point(1079, 480);
-            this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(162, 52);
-            this.btncancel.TabIndex = 22;
-            this.btncancel.Text = "បោះបង់ទិន្នន័យ";
-            this.btncancel.UseVisualStyleBackColor = false;
-            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 0;
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 52);
-            this.button1.TabIndex = 24;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "arrow.png");
-            // 
-            // btnadduser
-            // 
-            this.btnadduser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnadduser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnadduser.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadduser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnadduser.Location = new System.Drawing.Point(1350, 135);
-            this.btnadduser.Name = "btnadduser";
-            this.btnadduser.Size = new System.Drawing.Size(268, 52);
-            this.btnadduser.TabIndex = 25;
-            this.btnadduser.Text = "បន្ថែមអ្នកប្រើប្រាស់";
-            this.btnadduser.UseVisualStyleBackColor = false;
-            this.btnadduser.Click += new System.EventHandler(this.btnadduser_Click);
-            // 
-            // btnaddinformation
-            // 
-            this.btnaddinformation.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnaddinformation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnaddinformation.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddinformation.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnaddinformation.Location = new System.Drawing.Point(1350, 65);
-            this.btnaddinformation.Name = "btnaddinformation";
-            this.btnaddinformation.Size = new System.Drawing.Size(268, 52);
-            this.btnaddinformation.TabIndex = 27;
-            this.btnaddinformation.Text = "បន្ថែមព័ត៌មានអ្នកប្រើប្រាស់";
-            this.btnaddinformation.UseVisualStyleBackColor = false;
-            this.btnaddinformation.Click += new System.EventHandler(this.btnaddinformation_Click);
-            // 
-            // tblUsersBindingSource
-            // 
-            this.tblUsersBindingSource.DataMember = "tbl_Users";
-            this.tblUsersBindingSource.DataSource = this.nPIC_BCS_Y3_CDataSet;
             // 
             // nPIC_BCS_Y3_CDataSet
             // 
             this.nPIC_BCS_Y3_CDataSet.DataSetName = "NPIC_BCS_Y3_CDataSet";
             this.nPIC_BCS_Y3_CDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tblUsersTableAdapter
+            // tbl_UsersBindingSource
             // 
-            this.tblUsersTableAdapter.ClearBeforeFill = true;
+            this.tbl_UsersBindingSource.DataMember = "tbl_Users";
+            this.tbl_UsersBindingSource.DataSource = this.nPIC_BCS_Y3_CDataSet;
+            // 
+            // tbl_UsersTableAdapter
+            // 
+            this.tbl_UsersTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -318,253 +240,386 @@
             this.tableAdapterManager.tbl_SalesTableAdapter = null;
             this.tableAdapterManager.tbl_StocksTableAdapter = null;
             this.tableAdapterManager.tbl_SuppliersTableAdapter = null;
-            this.tableAdapterManager.tbl_UsersTableAdapter = this.tblUsersTableAdapter;
+            this.tableAdapterManager.tbl_UsersTableAdapter = this.tbl_UsersTableAdapter;
             this.tableAdapterManager.UpdateOrder = NPIC.BCS.Y3.C.NPIC_BCS_Y3_CDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // tbl_UsersDataGridView
-            // 
-            this.tbl_UsersDataGridView.AutoGenerateColumns = false;
-            this.tbl_UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tbl_UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewCheckBoxColumn2,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewImageColumn2});
-            this.tbl_UsersDataGridView.DataSource = this.tblUsersBindingSource;
-            this.tbl_UsersDataGridView.Location = new System.Drawing.Point(95, 553);
-            this.tbl_UsersDataGridView.Name = "tbl_UsersDataGridView";
-            this.tbl_UsersDataGridView.RowHeadersWidth = 51;
-            this.tbl_UsersDataGridView.RowTemplate.Height = 24;
-            this.tbl_UsersDataGridView.Size = new System.Drawing.Size(1523, 307);
-            this.tbl_UsersDataGridView.TabIndex = 27;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn8.HeaderText = "id";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "nickname";
-            this.dataGridViewTextBoxColumn9.HeaderText = "nickname";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "gender_id";
-            this.dataGridViewTextBoxColumn10.HeaderText = "gender_id";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "username";
-            this.dataGridViewTextBoxColumn11.HeaderText = "username";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "password";
-            this.dataGridViewTextBoxColumn12.HeaderText = "password";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "phone";
-            this.dataGridViewTextBoxColumn13.HeaderText = "phone";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "role";
-            this.dataGridViewTextBoxColumn14.HeaderText = "role";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Width = 125;
-            // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.DataPropertyName = "status";
-            this.dataGridViewCheckBoxColumn2.HeaderText = "status";
-            this.dataGridViewCheckBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            this.dataGridViewCheckBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "created_by";
-            this.dataGridViewTextBoxColumn15.HeaderText = "created_by";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "created_at";
-            this.dataGridViewTextBoxColumn16.HeaderText = "created_at";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Width = 125;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.DataPropertyName = "picture";
-            this.dataGridViewImageColumn2.HeaderText = "picture";
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 125;
             // 
             // idTextBox
             // 
-            this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "id", true));
-            this.idTextBox.Enabled = false;
-            this.idTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(383, 38);
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbl_UsersBindingSource, "id", true));
+            this.idTextBox.Location = new System.Drawing.Point(967, 615);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(319, 45);
-            this.idTextBox.TabIndex = 28;
-            this.idTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.idTextBox.ReadOnly = true;
+            this.idTextBox.Size = new System.Drawing.Size(129, 22);
+            this.idTextBox.TabIndex = 2;
+            this.idTextBox.Visible = false;
             // 
             // nicknameTextBox
             // 
             this.nicknameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nicknameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "nickname", true));
+            this.nicknameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbl_UsersBindingSource, "nickname", true));
             this.nicknameTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nicknameTextBox.Location = new System.Drawing.Point(383, 89);
+            this.nicknameTextBox.Location = new System.Drawing.Point(328, 100);
+            this.nicknameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nicknameTextBox.Name = "nicknameTextBox";
-            this.nicknameTextBox.Size = new System.Drawing.Size(319, 45);
-            this.nicknameTextBox.TabIndex = 30;
+            this.nicknameTextBox.Size = new System.Drawing.Size(367, 45);
+            this.nicknameTextBox.TabIndex = 4;
             this.nicknameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gender_idComboBox
             // 
-            this.gender_idComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "gender_id", true));
+            this.gender_idComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tbl_UsersBindingSource, "gender_id", true));
+            this.gender_idComboBox.DataSource = this.tblGendersBindingSource;
+            this.gender_idComboBox.DisplayMember = "title_kh";
             this.gender_idComboBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gender_idComboBox.FormattingEnabled = true;
-            this.gender_idComboBox.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.gender_idComboBox.Location = new System.Drawing.Point(383, 191);
+            this.gender_idComboBox.Location = new System.Drawing.Point(328, 155);
+            this.gender_idComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.gender_idComboBox.Name = "gender_idComboBox";
-            this.gender_idComboBox.Size = new System.Drawing.Size(319, 44);
-            this.gender_idComboBox.TabIndex = 32;
+            this.gender_idComboBox.Size = new System.Drawing.Size(367, 44);
+            this.gender_idComboBox.TabIndex = 6;
+            this.gender_idComboBox.ValueMember = "id";
+            // 
+            // tblGendersBindingSource
+            // 
+            this.tblGendersBindingSource.DataMember = "tbl_Genders";
+            this.tblGendersBindingSource.DataSource = this.nPIC_BCS_Y3_CDataSet;
             // 
             // usernameTextBox
             // 
             this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "username", true));
+            this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbl_UsersBindingSource, "username", true));
             this.usernameTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(383, 140);
+            this.usernameTextBox.Location = new System.Drawing.Point(328, 213);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(319, 45);
-            this.usernameTextBox.TabIndex = 34;
+            this.usernameTextBox.Size = new System.Drawing.Size(367, 45);
+            this.usernameTextBox.TabIndex = 8;
             this.usernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "password", true));
+            this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbl_UsersBindingSource, "password", true));
             this.passwordTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(383, 241);
+            this.passwordTextBox.Location = new System.Drawing.Point(328, 271);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(319, 45);
-            this.passwordTextBox.TabIndex = 36;
+            this.passwordTextBox.Size = new System.Drawing.Size(367, 45);
+            this.passwordTextBox.TabIndex = 10;
             this.passwordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // phoneTextBox
             // 
             this.phoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "phone", true));
+            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbl_UsersBindingSource, "phone", true));
             this.phoneTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTextBox.Location = new System.Drawing.Point(383, 292);
+            this.phoneTextBox.Location = new System.Drawing.Point(328, 332);
+            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(319, 45);
-            this.phoneTextBox.TabIndex = 38;
+            this.phoneTextBox.Size = new System.Drawing.Size(367, 45);
+            this.phoneTextBox.TabIndex = 12;
             this.phoneTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // roleComboBox
             // 
-            this.roleComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "role", true));
+            this.roleComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbl_UsersBindingSource, "role", true));
             this.roleComboBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roleComboBox.FormattingEnabled = true;
             this.roleComboBox.Items.AddRange(new object[] {
             "Admin",
             "User"});
-            this.roleComboBox.Location = new System.Drawing.Point(383, 343);
+            this.roleComboBox.Location = new System.Drawing.Point(328, 390);
+            this.roleComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.roleComboBox.Name = "roleComboBox";
-            this.roleComboBox.Size = new System.Drawing.Size(319, 44);
-            this.roleComboBox.TabIndex = 40;
+            this.roleComboBox.Size = new System.Drawing.Size(367, 44);
+            this.roleComboBox.TabIndex = 14;
             // 
             // statusCheckBox
             // 
-            this.statusCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tblUsersBindingSource, "status", true));
+            this.statusCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tbl_UsersBindingSource, "status", true));
             this.statusCheckBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusCheckBox.Location = new System.Drawing.Point(383, 496);
+            this.statusCheckBox.Location = new System.Drawing.Point(328, 514);
+            this.statusCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.statusCheckBox.Name = "statusCheckBox";
-            this.statusCheckBox.Size = new System.Drawing.Size(169, 44);
-            this.statusCheckBox.TabIndex = 42;
-            this.statusCheckBox.Text = "checkBox";
+            this.statusCheckBox.Size = new System.Drawing.Size(267, 47);
+            this.statusCheckBox.TabIndex = 16;
             this.statusCheckBox.UseVisualStyleBackColor = true;
             // 
             // created_byTextBox
             // 
             this.created_byTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.created_byTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblUsersBindingSource, "created_by", true));
+            this.created_byTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbl_UsersBindingSource, "created_by", true));
             this.created_byTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.created_byTextBox.Location = new System.Drawing.Point(383, 393);
+            this.created_byTextBox.Location = new System.Drawing.Point(328, 455);
+            this.created_byTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.created_byTextBox.Name = "created_byTextBox";
-            this.created_byTextBox.Size = new System.Drawing.Size(319, 45);
-            this.created_byTextBox.TabIndex = 44;
+            this.created_byTextBox.Size = new System.Drawing.Size(367, 45);
+            this.created_byTextBox.TabIndex = 18;
             this.created_byTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // created_atDateTimePicker
             // 
-            this.created_atDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tblUsersBindingSource, "created_at", true));
-            this.created_atDateTimePicker.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.created_atDateTimePicker.Location = new System.Drawing.Point(383, 444);
+            this.created_atDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbl_UsersBindingSource, "created_at", true));
+            this.created_atDateTimePicker.Location = new System.Drawing.Point(987, 673);
+            this.created_atDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.created_atDateTimePicker.Name = "created_atDateTimePicker";
-            this.created_atDateTimePicker.Size = new System.Drawing.Size(319, 45);
-            this.created_atDateTimePicker.TabIndex = 46;
+            this.created_atDateTimePicker.Size = new System.Drawing.Size(173, 22);
+            this.created_atDateTimePicker.TabIndex = 20;
+            this.created_atDateTimePicker.Visible = false;
             // 
             // picturePictureBox
             // 
-            this.picturePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picturePictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.tblUsersBindingSource, "picture", true));
+            this.picturePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picturePictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.tbl_UsersBindingSource, "picture", true));
             this.picturePictureBox.Image = global::NPIC.BCS.Y3.C.Properties.Resources.working;
-            this.picturePictureBox.Location = new System.Drawing.Point(835, 38);
+            this.picturePictureBox.Location = new System.Drawing.Point(785, 111);
+            this.picturePictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.picturePictureBox.Name = "picturePictureBox";
-            this.picturePictureBox.Size = new System.Drawing.Size(330, 384);
+            this.picturePictureBox.Size = new System.Drawing.Size(375, 400);
             this.picturePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturePictureBox.TabIndex = 48;
+            this.picturePictureBox.TabIndex = 22;
             this.picturePictureBox.TabStop = false;
-            this.picturePictureBox.Click += new System.EventHandler(this.picturePictureBox_Click_1);
+            this.picturePictureBox.DoubleClick += new System.EventHandler(this.picturePictureBox_DoubleClick);
             // 
-            // frmUser
+            // user_viewBindingSource
+            // 
+            this.user_viewBindingSource.DataMember = "user_view";
+            this.user_viewBindingSource.DataSource = this.nPIC_BCS_Y3_CDataSet;
+            // 
+            // user_viewTableAdapter
+            // 
+            this.user_viewTableAdapter.ClearBeforeFill = true;
+            // 
+            // user_viewDataGridView
+            // 
+            this.user_viewDataGridView.AllowUserToAddRows = false;
+            this.user_viewDataGridView.AllowUserToDeleteRows = false;
+            this.user_viewDataGridView.AutoGenerateColumns = false;
+            this.user_viewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.user_viewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewCheckBoxColumn1});
+            this.user_viewDataGridView.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.user_viewDataGridView.DataSource = this.user_viewBindingSource;
+            this.user_viewDataGridView.Location = new System.Drawing.Point(92, 588);
+            this.user_viewDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.user_viewDataGridView.Name = "user_viewDataGridView";
+            this.user_viewDataGridView.ReadOnly = true;
+            this.user_viewDataGridView.RowHeadersWidth = 51;
+            this.user_viewDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.user_viewDataGridView.Size = new System.Drawing.Size(1496, 271);
+            this.user_viewDataGridView.TabIndex = 22;
+            this.user_viewDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.user_viewDataGridView_CellClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nickname";
+            this.dataGridViewTextBoxColumn2.FillWeight = 150F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "NickName";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "title_kh";
+            this.dataGridViewTextBoxColumn3.HeaderText = "title_kh";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "username";
+            this.dataGridViewTextBoxColumn5.HeaderText = "username";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "phone";
+            this.dataGridViewTextBoxColumn6.HeaderText = "phone";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "password";
+            this.dataGridViewTextBoxColumn4.HeaderText = "password";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "role";
+            this.dataGridViewTextBoxColumn7.HeaderText = "role";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "status";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "status";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Width = 125;
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.Color.Blue;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_save.Font = new System.Drawing.Font("Khmer OS Battambang", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Location = new System.Drawing.Point(1361, 519);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(227, 62);
+            this.btn_save.TabIndex = 23;
+            this.btn_save.Text = "រក្សាទុកទិន្នន័យ";
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.BackColor = System.Drawing.Color.OrangeRed;
+            this.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btndelete.Font = new System.Drawing.Font("Khmer OS Battambang", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndelete.ForeColor = System.Drawing.Color.White;
+            this.btndelete.Location = new System.Drawing.Point(1127, 519);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(227, 62);
+            this.btndelete.TabIndex = 24;
+            this.btndelete.Text = "លុបទិន្នន័យ";
+            this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
+            // btnadd
+            // 
+            this.btnadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnadd.Font = new System.Drawing.Font("Khmer OS Battambang", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadd.ForeColor = System.Drawing.Color.White;
+            this.btnadd.Location = new System.Drawing.Point(1267, 100);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(321, 62);
+            this.btnadd.TabIndex = 25;
+            this.btnadd.Text = "បន្ថែមព័ត៌មានអ្នកប្រើប្រាស់";
+            this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Khmer OS Battambang", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1341, 169);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(247, 62);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "បង្កើតអ្នកប្រើប្រាស់";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Goldenrod;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Khmer OS Battambang", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(892, 519);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(227, 62);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "មិនផ្លាស់ប្ដូរ";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnback
+            // 
+            this.btnback.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnback.Location = new System.Drawing.Point(12, 12);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(106, 43);
+            this.btnback.TabIndex = 28;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = false;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
+            // tbl_GendersTableAdapter
+            // 
+            this.tbl_GendersTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtsearch
+            // 
+            this.txtsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtsearch.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsearch.Location = new System.Drawing.Point(368, 12);
+            this.txtsearch.Name = "txtsearch";
+            this.txtsearch.Size = new System.Drawing.Size(601, 45);
+            this.txtsearch.TabIndex = 29;
+            this.txtsearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtsearch_KeyDown);
+            // 
+            // btnsearch
+            // 
+            this.btnsearch.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsearch.Font = new System.Drawing.Font("Khmer OS Battambang", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsearch.ForeColor = System.Drawing.Color.White;
+            this.btnsearch.Location = new System.Drawing.Point(1141, 10);
+            this.btnsearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnsearch.Name = "btnsearch";
+            this.btnsearch.Size = new System.Drawing.Size(227, 62);
+            this.btnsearch.TabIndex = 30;
+            this.btnsearch.Text = "ស្វែងរក";
+            this.btnsearch.UseVisualStyleBackColor = false;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
+            // 
+            // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1653, 881);
+            this.ClientSize = new System.Drawing.Size(1665, 923);
+            this.Controls.Add(this.btnsearch);
+            this.Controls.Add(this.txtsearch);
+            this.Controls.Add(this.btnback);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnadd);
+            this.Controls.Add(this.btndelete);
+            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.user_viewDataGridView);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(nicknameLabel);
@@ -587,20 +642,16 @@
             this.Controls.Add(this.created_atDateTimePicker);
             this.Controls.Add(pictureLabel);
             this.Controls.Add(this.picturePictureBox);
-            this.Controls.Add(this.tbl_UsersDataGridView);
-            this.Controls.Add(this.btnaddinformation);
-            this.Controls.Add(this.btnadduser);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btncancel);
-            this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.btnsave);
-            this.Name = "frmUser";
-            this.Text = "frmUser";
-            this.Load += new System.EventHandler(this.frmUser_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "FrmUser";
+            this.Text = "FrmUser";
+            this.Load += new System.EventHandler(this.FrmUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nPIC_BCS_Y3_CDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_UsersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_UsersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblGendersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.user_viewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.user_viewDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,36 +660,9 @@
         #endregion
 
         private NPIC_BCS_Y3_CDataSet nPIC_BCS_Y3_CDataSet;
-        private System.Windows.Forms.BindingSource tblUsersBindingSource;
-        private NPIC_BCS_Y3_CDataSetTableAdapters.tbl_UsersTableAdapter tblUsersTableAdapter;
+        private System.Windows.Forms.BindingSource tbl_UsersBindingSource;
+        private NPIC_BCS_Y3_CDataSetTableAdapters.tbl_UsersTableAdapter tbl_UsersTableAdapter;
         private NPIC_BCS_Y3_CDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.Button btnsave;
-        private System.Windows.Forms.Button btndelete;
-        private System.Windows.Forms.Button btncancel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnadduser;
-        private System.Windows.Forms.Button btnaddinformation;
-        private System.Windows.Forms.DataGridView tbl_UsersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nicknameTextBox;
         private System.Windows.Forms.ComboBox gender_idComboBox;
@@ -650,6 +674,26 @@
         private System.Windows.Forms.TextBox created_byTextBox;
         private System.Windows.Forms.DateTimePicker created_atDateTimePicker;
         private System.Windows.Forms.PictureBox picturePictureBox;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.BindingSource user_viewBindingSource;
+        private NPIC_BCS_Y3_CDataSetTableAdapters.user_viewTableAdapter user_viewTableAdapter;
+        private System.Windows.Forms.DataGridView user_viewDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.BindingSource tblGendersBindingSource;
+        private NPIC_BCS_Y3_CDataSetTableAdapters.tbl_GendersTableAdapter tbl_GendersTableAdapter;
+        private System.Windows.Forms.TextBox txtsearch;
+        private System.Windows.Forms.Button btnsearch;
     }
 }

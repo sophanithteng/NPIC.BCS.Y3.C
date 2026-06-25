@@ -67,6 +67,106 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbl_ProductsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(175, 136);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(36, 36);
+            idLabel.TabIndex = 1;
+            idLabel.Text = "id:";
+            // 
+            // barcodeLabel
+            // 
+            barcodeLabel.AutoSize = true;
+            barcodeLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            barcodeLabel.Location = new System.Drawing.Point(175, 206);
+            barcodeLabel.Name = "barcodeLabel";
+            barcodeLabel.Size = new System.Drawing.Size(93, 36);
+            barcodeLabel.TabIndex = 3;
+            barcodeLabel.Text = "barcode:";
+            // 
+            // product_nameLabel
+            // 
+            product_nameLabel.AutoSize = true;
+            product_nameLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            product_nameLabel.Location = new System.Drawing.Point(175, 275);
+            product_nameLabel.Name = "product_nameLabel";
+            product_nameLabel.Size = new System.Drawing.Size(143, 36);
+            product_nameLabel.TabIndex = 5;
+            product_nameLabel.Text = "product name:";
+            // 
+            // qtyLabel
+            // 
+            qtyLabel.AutoSize = true;
+            qtyLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            qtyLabel.Location = new System.Drawing.Point(175, 339);
+            qtyLabel.Name = "qtyLabel";
+            qtyLabel.Size = new System.Drawing.Size(48, 36);
+            qtyLabel.TabIndex = 7;
+            qtyLabel.Text = "qty:";
+            // 
+            // cate_idLabel
+            // 
+            cate_idLabel.AutoSize = true;
+            cate_idLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cate_idLabel.Location = new System.Drawing.Point(175, 402);
+            cate_idLabel.Name = "cate_idLabel";
+            cate_idLabel.Size = new System.Drawing.Size(80, 36);
+            cate_idLabel.TabIndex = 9;
+            cate_idLabel.Text = "cate id:";
+            // 
+            // price_inLabel
+            // 
+            price_inLabel.AutoSize = true;
+            price_inLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            price_inLabel.Location = new System.Drawing.Point(175, 464);
+            price_inLabel.Name = "price_inLabel";
+            price_inLabel.Size = new System.Drawing.Size(85, 36);
+            price_inLabel.TabIndex = 11;
+            price_inLabel.Text = "price in:";
+            // 
+            // price_outLabel
+            // 
+            price_outLabel.AutoSize = true;
+            price_outLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            price_outLabel.Location = new System.Drawing.Point(175, 526);
+            price_outLabel.Name = "price_outLabel";
+            price_outLabel.Size = new System.Drawing.Size(98, 36);
+            price_outLabel.TabIndex = 13;
+            price_outLabel.Text = "price out:";
+            // 
+            // statusLabel
+            // 
+            statusLabel.AutoSize = true;
+            statusLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            statusLabel.Location = new System.Drawing.Point(175, 641);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new System.Drawing.Size(75, 36);
+            statusLabel.TabIndex = 15;
+            statusLabel.Text = "status:";
+            // 
+            // created_atLabel
+            // 
+            created_atLabel.AutoSize = true;
+            created_atLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            created_atLabel.Location = new System.Drawing.Point(175, 585);
+            created_atLabel.Name = "created_atLabel";
+            created_atLabel.Size = new System.Drawing.Size(111, 36);
+            created_atLabel.TabIndex = 17;
+            created_atLabel.Text = "created at:";
+            // 
+            // user_idLabel
+            // 
+            user_idLabel.AutoSize = true;
+            user_idLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            user_idLabel.Location = new System.Drawing.Point(179, 78);
+            user_idLabel.Name = "user_idLabel";
+            user_idLabel.Size = new System.Drawing.Size(81, 36);
+            user_idLabel.TabIndex = 19;
+            user_idLabel.Text = "user id:";
+            // 
             // nPIC_BCS_Y3_CDataSet
             // 
             this.nPIC_BCS_Y3_CDataSet.DataSetName = "NPIC_BCS_Y3_CDataSet";
@@ -94,16 +194,6 @@
             this.tableAdapterManager.tbl_UsersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = NPIC.BCS.Y3.C.NPIC_BCS_Y3_CDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(175, 136);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(36, 36);
-            idLabel.TabIndex = 1;
-            idLabel.Text = "id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -111,18 +201,8 @@
             this.idTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idTextBox.Location = new System.Drawing.Point(365, 136);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(436, 45);
+            this.idTextBox.Size = new System.Drawing.Size(392, 45);
             this.idTextBox.TabIndex = 2;
-            // 
-            // barcodeLabel
-            // 
-            barcodeLabel.AutoSize = true;
-            barcodeLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            barcodeLabel.Location = new System.Drawing.Point(175, 206);
-            barcodeLabel.Name = "barcodeLabel";
-            barcodeLabel.Size = new System.Drawing.Size(93, 36);
-            barcodeLabel.TabIndex = 3;
-            barcodeLabel.Text = "barcode:";
             // 
             // barcodeTextBox
             // 
@@ -131,18 +211,8 @@
             this.barcodeTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barcodeTextBox.Location = new System.Drawing.Point(365, 204);
             this.barcodeTextBox.Name = "barcodeTextBox";
-            this.barcodeTextBox.Size = new System.Drawing.Size(436, 45);
+            this.barcodeTextBox.Size = new System.Drawing.Size(392, 45);
             this.barcodeTextBox.TabIndex = 4;
-            // 
-            // product_nameLabel
-            // 
-            product_nameLabel.AutoSize = true;
-            product_nameLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            product_nameLabel.Location = new System.Drawing.Point(175, 275);
-            product_nameLabel.Name = "product_nameLabel";
-            product_nameLabel.Size = new System.Drawing.Size(143, 36);
-            product_nameLabel.TabIndex = 5;
-            product_nameLabel.Text = "product name:";
             // 
             // product_nameTextBox
             // 
@@ -151,18 +221,8 @@
             this.product_nameTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.product_nameTextBox.Location = new System.Drawing.Point(365, 266);
             this.product_nameTextBox.Name = "product_nameTextBox";
-            this.product_nameTextBox.Size = new System.Drawing.Size(436, 45);
+            this.product_nameTextBox.Size = new System.Drawing.Size(392, 45);
             this.product_nameTextBox.TabIndex = 6;
-            // 
-            // qtyLabel
-            // 
-            qtyLabel.AutoSize = true;
-            qtyLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            qtyLabel.Location = new System.Drawing.Point(175, 339);
-            qtyLabel.Name = "qtyLabel";
-            qtyLabel.Size = new System.Drawing.Size(48, 36);
-            qtyLabel.TabIndex = 7;
-            qtyLabel.Text = "qty:";
             // 
             // qtyTextBox
             // 
@@ -171,18 +231,8 @@
             this.qtyTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qtyTextBox.Location = new System.Drawing.Point(365, 330);
             this.qtyTextBox.Name = "qtyTextBox";
-            this.qtyTextBox.Size = new System.Drawing.Size(436, 45);
+            this.qtyTextBox.Size = new System.Drawing.Size(392, 45);
             this.qtyTextBox.TabIndex = 8;
-            // 
-            // cate_idLabel
-            // 
-            cate_idLabel.AutoSize = true;
-            cate_idLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cate_idLabel.Location = new System.Drawing.Point(175, 402);
-            cate_idLabel.Name = "cate_idLabel";
-            cate_idLabel.Size = new System.Drawing.Size(80, 36);
-            cate_idLabel.TabIndex = 9;
-            cate_idLabel.Text = "cate id:";
             // 
             // cate_idTextBox
             // 
@@ -191,18 +241,8 @@
             this.cate_idTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cate_idTextBox.Location = new System.Drawing.Point(365, 393);
             this.cate_idTextBox.Name = "cate_idTextBox";
-            this.cate_idTextBox.Size = new System.Drawing.Size(436, 45);
+            this.cate_idTextBox.Size = new System.Drawing.Size(392, 45);
             this.cate_idTextBox.TabIndex = 10;
-            // 
-            // price_inLabel
-            // 
-            price_inLabel.AutoSize = true;
-            price_inLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            price_inLabel.Location = new System.Drawing.Point(175, 464);
-            price_inLabel.Name = "price_inLabel";
-            price_inLabel.Size = new System.Drawing.Size(85, 36);
-            price_inLabel.TabIndex = 11;
-            price_inLabel.Text = "price in:";
             // 
             // price_inTextBox
             // 
@@ -211,18 +251,8 @@
             this.price_inTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.price_inTextBox.Location = new System.Drawing.Point(365, 455);
             this.price_inTextBox.Name = "price_inTextBox";
-            this.price_inTextBox.Size = new System.Drawing.Size(436, 45);
+            this.price_inTextBox.Size = new System.Drawing.Size(392, 45);
             this.price_inTextBox.TabIndex = 12;
-            // 
-            // price_outLabel
-            // 
-            price_outLabel.AutoSize = true;
-            price_outLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            price_outLabel.Location = new System.Drawing.Point(175, 526);
-            price_outLabel.Name = "price_outLabel";
-            price_outLabel.Size = new System.Drawing.Size(98, 36);
-            price_outLabel.TabIndex = 13;
-            price_outLabel.Text = "price out:";
             // 
             // price_outTextBox
             // 
@@ -231,18 +261,8 @@
             this.price_outTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.price_outTextBox.Location = new System.Drawing.Point(365, 517);
             this.price_outTextBox.Name = "price_outTextBox";
-            this.price_outTextBox.Size = new System.Drawing.Size(436, 45);
+            this.price_outTextBox.Size = new System.Drawing.Size(392, 45);
             this.price_outTextBox.TabIndex = 14;
-            // 
-            // statusLabel
-            // 
-            statusLabel.AutoSize = true;
-            statusLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            statusLabel.Location = new System.Drawing.Point(175, 641);
-            statusLabel.Name = "statusLabel";
-            statusLabel.Size = new System.Drawing.Size(75, 36);
-            statusLabel.TabIndex = 15;
-            statusLabel.Text = "status:";
             // 
             // statusCheckBox
             // 
@@ -255,16 +275,6 @@
             this.statusCheckBox.Text = "checkBox1";
             this.statusCheckBox.UseVisualStyleBackColor = true;
             // 
-            // created_atLabel
-            // 
-            created_atLabel.AutoSize = true;
-            created_atLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            created_atLabel.Location = new System.Drawing.Point(175, 585);
-            created_atLabel.Name = "created_atLabel";
-            created_atLabel.Size = new System.Drawing.Size(111, 36);
-            created_atLabel.TabIndex = 17;
-            created_atLabel.Text = "created at:";
-            // 
             // created_atDateTimePicker
             // 
             this.created_atDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbl_ProductsBindingSource, "created_at", true));
@@ -274,16 +284,6 @@
             this.created_atDateTimePicker.Size = new System.Drawing.Size(239, 45);
             this.created_atDateTimePicker.TabIndex = 18;
             // 
-            // user_idLabel
-            // 
-            user_idLabel.AutoSize = true;
-            user_idLabel.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            user_idLabel.Location = new System.Drawing.Point(179, 78);
-            user_idLabel.Name = "user_idLabel";
-            user_idLabel.Size = new System.Drawing.Size(81, 36);
-            user_idLabel.TabIndex = 19;
-            user_idLabel.Text = "user id:";
-            // 
             // user_idTextBox
             // 
             this.user_idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -291,7 +291,7 @@
             this.user_idTextBox.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_idTextBox.Location = new System.Drawing.Point(365, 69);
             this.user_idTextBox.Name = "user_idTextBox";
-            this.user_idTextBox.Size = new System.Drawing.Size(436, 45);
+            this.user_idTextBox.Size = new System.Drawing.Size(392, 45);
             this.user_idTextBox.TabIndex = 20;
             // 
             // FrmProduct

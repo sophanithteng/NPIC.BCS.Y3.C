@@ -26,7 +26,7 @@ namespace NPIC.BCS.Y3.C.Sophanith.layout
         private void btnuser_Click(object sender, EventArgs e)
         {
            
-            GB.OpenForm(new user.frmUser());
+            GB.OpenForm(new user.FrmUser());
         }
 
         private void btnhomepage_Click(object sender, EventArgs e)
